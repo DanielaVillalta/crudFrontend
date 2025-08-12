@@ -88,7 +88,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
                 `;
 
                 //Funcionalidad para botones de Editar
-                tr.querySelector.addEventListener("click", ()=>{
+                tr.querySelector("#saveCategory").addEventListener("click", ()=>{
                     form.categoryId.value = cat.idCategoria;
                     form.categoryName.value = cat.nombreCategoria;
                     form.categoryDescription = cat.descripcion;
