@@ -88,11 +88,11 @@ document.addEventListener("DOMContentLoaded", ()=>{
                 `;
 
                 //Funcionalidad para botones de Editar
-                tr.querySelector("#saveCategory").addEventListener("click", ()=>{
+                tr.querySelector(".edit-btn").addEventListener("click", ()=>{
                     form.categoryId.value = cat.idCategoria;
                     form.categoryName.value = cat.nombreCategoria;
-                    form.categoryDescription = cat.descripcion;
-                    form.textContent = "Editar Categoría";
+                    form.categoryDescription.value = cat.descripcion;
+                    lblModal.textContent = "Editar Categoría";
 
                     modal.show();
                 });

@@ -14,7 +14,7 @@ export async function createCategory(data) { //"data" son los datos que se guard
 }
 
 export async function updateCategory(id, data) {
-    await fetch(`${API_URL}/updateCatefory/${id}`, {
+    await fetch(`${API_URL}/updateCategory/${id}`, {
         method: "PUT",
         headers: {"Content-Type": "application/json"},
         body: JSON.stringify(data)
