@@ -92,7 +92,7 @@ document.addEventListener("DOMContentLoaded", () => {
             fechaIngreso: form.productDate.value,
             categoriaId: Number(form.productCategory.value),
             usuarioId: 2,
-            imagen_url: finalImageUrl || null, //Campo correcto según backend
+            imagenUrl: finalImageUrl || null, //Campo correcto según backend
         };
 
         //Crear o actualizar producto
@@ -135,11 +135,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 // Imagen
                 const tdImg = document.createElement("td");
-                if (item.imagen_url) {
+                if (item.imagenUrl) {
                     const img = document.createElement("img");
                     img.className = "thumb";
                     img.alt = "img";
-                    img.src = item.imagen_url; // Opcional: validar dominio aquí
+                    img.src = item.imagenUrl; // Opcional: validar dominio aquí
                     tdImg.appendChild(img);
                 } else {
                     const span = document.createElement("span");
@@ -248,8 +248,8 @@ document.addEventListener("DOMContentLoaded", () => {
         form.productCategory.value = item.categoriaId;
         form.productDate.value = item.fechaIngreso;
 
-        if (imageUrlHidden) imageUrlHidden.value = item.imagen_url || "";
-        if (imagePreview) imagePreview.src = item.imagen_url || "";
+        if (imageUrlHidden) imageUrlHidden.value = item.imagenUrl || "";
+        if (imagePreview) imagePreview.src = item.imagenUrl || "";
         if (imageFileInput) imageFileInput.value = "";
 
         modalLabel.textContent = "Editar Producto";
